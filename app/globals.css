@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-primary: #960022;
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #7d001c;
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+    @apply font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.glass-dark {
+  background: rgba(248, 250, 252, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.accent-glow {
+  box-shadow: 0 4px 15px rgba(150, 0, 34, 0.25);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
